@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useEvents } from "../context/EventContext";
 import RegisterForm from "../components/RegisterForm";
 
+const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
 function Register() {
   const { events } = useEvents();
   const [message, setMessage] = useState({ text: "", type: "" });
@@ -15,7 +17,7 @@ function Register() {
 
   const handleSubmit = async (data) => {
     try {
-      const res = await fetch("http://localhost:5000/api/registrations", {
+      const res = await fetch(`${API}/registrations`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...data, eventId: Number(data.eventId) }),
