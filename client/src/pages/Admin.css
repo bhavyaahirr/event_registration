@@ -1,0 +1,94 @@
+.admin {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.stat-card {
+  flex: 1 1 140px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 28px;
+  color: #1d4ed8;
+}
+
+.stat-card p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.filters input,
+.filters select {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filters input {
+  flex: 1 1 220px;
+}
+
+.table-wrap {
+  overflow-x: auto; /* table scrolls sideways on small phones */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+th {
+  background: #1d4ed8;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.admin-msg {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.admin-msg.error {
+  color: #dc2626;
+}
