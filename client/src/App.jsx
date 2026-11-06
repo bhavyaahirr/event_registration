@@ -1,30 +1,21 @@
-import { Routes, Route, Link } from 'react-router-dom'
-import Admin from './pages/Admin'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/NavBar";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Admin from "./pages/Admin";
+import "./App.css";
 
 function App() {
   return (
     <>
-
-    <nav>
-
-      <Link to="/">Home</Link>
-
-      <Link to="/admin">Admin</Link>
-
-    </nav>
-    <Routes>
-      <Route
-        path="/"
-        element={<h1>Event Registration App</h1>}
-      />
-
-      <Route
-        path="/admin"
-        element={<Admin />}
-      />
-    </Routes>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
